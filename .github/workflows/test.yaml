@@ -16,4 +16,4 @@ jobs:
       run: |
         echo ${{ steps.ip.outputs.ipv4 }}
         echo ${{ steps.ip.outputs.ipv6 }}
-    - run: docker run nginx -p 8080:80
+    - run: docker run -p 8080:80 nginx
