@@ -1,6 +1,7 @@
 name: Public IP
 
-on: push
+on: 
+  workflow_dispatch: {}
 
 jobs:
   build:
@@ -15,3 +16,4 @@ jobs:
       run: |
         echo ${{ steps.ip.outputs.ipv4 }}
         echo ${{ steps.ip.outputs.ipv6 }}
+    - run: docker run nginx -p 8080:80
